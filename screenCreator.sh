@@ -44,7 +44,7 @@ if [ ! -f $FILE ]; then
   exit 1
 fi
 
-screen -dmS $NAME
+screen -a -dmS $NAME htop
 
 # DEFAULT WINDOWS=0
 n=1
@@ -56,7 +56,8 @@ do
   screen -S $NAME -X screen $n
 
   #SCREEN EXEC CMD IN WINDOWS
-  screen -S $NAME -p $n -X exec $cmd
+  screen -S $NAME -p $n -X stuff "$cmd
+  "
 
 	echo "$cmd"
   n=$((n+1))
