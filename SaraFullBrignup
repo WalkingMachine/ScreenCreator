@@ -1,0 +1,4 @@
+
+cd ~/lu4r-0.2.1 ; java -Xmx1G -jar lu4r-server-0.2.1.jar simple amr en 9001
+roslaunch sara_launch sara_brignup.launch
+roslaunch sara_launch sara_brignup_brain.launch
